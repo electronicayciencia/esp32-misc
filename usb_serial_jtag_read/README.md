@@ -1,11 +1,12 @@
-# USB Serial JTAG Read
+# USB Serial JTAG Read Bug
+
+> TLDR: Skip to the bottom of the README to see the buggy driver code.
 
 ## Overview
 
 Derived from ESP-IDF 5.5.2 USB serial JTAG echo example to demostrate **ESP-IDF bug in ESP Serial JTAG driver**.
 
 It just reads bytes from USB CDC device and prints them over UART0.
-
 
 ## How to use example
 
@@ -248,3 +249,4 @@ When the buffer is full, `xRingbufferSendFromISR` cannot append the data, but si
 `usb_serial_jtag_ll_read_rxfifo` should not be called unless there are 64 bytes free in the buffer. 
 
 That is the reason low level task works but driver miss bytes.
+
