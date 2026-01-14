@@ -5,7 +5,7 @@
 #define SAMPLE_RATE 44100
 #define I2S_BCLK_GPIO 1
 #define I2S_WS_GPIO   2
-#define I2S_DIN_GPIO  3
+#define I2S_DOUT_GPIO 3
 
 void app_main(void)
 {
@@ -32,7 +32,7 @@ void app_main(void)
         .gpio_cfg = {
             .bclk = I2S_BCLK_GPIO,
             .ws = I2S_WS_GPIO,
-            .dout = I2S_DIN_GPIO,
+            .dout = I2S_DOUT_GPIO,
             .din = I2S_GPIO_UNUSED,
             .invert_flags = {
                 .bclk_inv = false,
