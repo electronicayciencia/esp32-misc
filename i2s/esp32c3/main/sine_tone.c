@@ -11,9 +11,9 @@
     #define I2S_WS_GPIO    2
     #define I2S_DOUT_GPIO  3
 #elif CONFIG_IDF_TARGET_ESP32
-    #define I2S_BCLK_GPIO  18
-    #define I2S_WS_GPIO    19
-    #define I2S_DOUT_GPIO  23
+    #define I2S_BCLK_GPIO  21
+    #define I2S_WS_GPIO    16   // LRCK
+    #define I2S_DOUT_GPIO  17   // DIN
 #else
     #error "Unsupported target"
 #endif
